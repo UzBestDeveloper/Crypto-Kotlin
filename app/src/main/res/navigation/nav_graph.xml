@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cryptoListFragment">
+
+
+    <fragment
+        android:id="@+id/cryptoListFragment"
+        android:name="com.developer.cryptokotlin.ui.fragments.cryptoList.CryptoListFragment"
+        android:label="fragment_crypto_list"
+        tools:layout="@layout/fragment_crypto_list" >
+        <action
+            android:id="@+id/action_cryptoListFragment_to_assetDetailsFragment"
+            app:destination="@id/assetDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assetDetailsFragment"
+        android:name="com.developer.cryptokotlin.ui.fragments.assetDetails.AssetDetailsFragment"
+        android:label="fragment_asset_details"
+        tools:layout="@layout/fragment_asset_details" />
+</navigation>
