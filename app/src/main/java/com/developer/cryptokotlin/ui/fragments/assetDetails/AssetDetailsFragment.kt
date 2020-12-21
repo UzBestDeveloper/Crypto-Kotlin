@@ -84,7 +84,7 @@ class AssetDetailsFragment : Fragment(), OnChartValueSelectedListener {
 
         assetDetailsViewModel.data.observe(viewLifecycleOwner, Observer {
 
-            if (null != it) {
+            if (it?.values != null) {
                 initTimeSeries(it, binding)
             }
         })
